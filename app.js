@@ -6,6 +6,8 @@ app.get('/', (req, res)=>{
     res.send("<h1>Hello World</h1>")
 })
 
-app.listen(2090, ()=>{
-    console.log("server running on port 5080")
+const port = process.env.PORT || 2090 
+
+app.listen(port, ()=>{
+    console.log(`server running on port ${port}`)
 })
